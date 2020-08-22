@@ -1,0 +1,115 @@
+.list-item {
+  color: black;
+  background-color: white;
+  background-image: url("../../assets/Cat.png");
+  background-position: 50% 180%;
+  background-repeat: no-repeat;
+  padding: 20px 45px;
+  position: relative;
+  border: 5px solid $default-color;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 323px;
+  min-height: 480px;
+
+  &:hover {
+    border-color: $default-hover;
+  }
+
+  &:hover .list-item__weight {
+    background-color: $default-hover;
+  }
+
+  &--selected {
+    border-color: $selected;
+  }
+
+  &--selected:hover {
+    border-color: $selected-hover;
+  }
+
+  &--selected .list-item__weight {
+    background-color: $selected;
+  }
+
+  &--selected:hover .list-item__weight {
+    background-color: $selected-hover;
+  }
+
+  &--disabled {
+    border-color: $disabled;
+    pointer-events: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: rgba(255, 255, 255, .8);
+      left: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &--disabled .list-item__weight {
+    background-color: $disabled;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 323px;
+  }
+}
+
+.list-item__header {
+  font-size: 48px;
+  font-style: bold;
+  margin: 0;
+}
+
+.list-item__subheader {
+  display: block;
+  font-size: 24px;
+}
+
+.list-item__text {
+  font-size: 16px;
+  color: #666;
+}
+
+.list-item__text-dose {
+  color: #666;
+  max-width: 130px;
+}
+
+.list-item__weight {
+  color: white;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-size: 38px;
+  line-height: 32px;
+  text-align: center;
+  padding: 0.3em;
+  background-color: $default-color;
+}
+
+.list-item__link {
+  font-size: 13px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}

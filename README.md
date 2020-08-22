@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Q1 Расскажите, чем, на ваш взгляд, отличается хорошая верстка от плохой с точки зрения:
 
-## Available Scripts
+- пользователя
+  Пользователю, в первую очередь, важно что бы интерфейс был удобен, был приятный шрифт и отступы где это нужно, что бы отдельные элементы не оттягивали на себя внимание, скорость работы интерфейса
+- менеджера проекта
+  Ему важно что бы весь функционал был выполнен строго по ТЗ и главное в срок
+- дизайнера
+  Для дизайнера хорошая верстка это та, которая pixel perfect с его макетом
+- верстальщика
+  все элементы должны иметь возможность переиспользоваться
+- клиентского программиста
+- серверного программиста
+  для них хорошая верстка та, которая не ломается при любых обстоятельствах
 
-In the project directory, you can run:
+### Q2 Опишите основные особенности верстки крупных многостраничных сайтов, дизайн которых может меняться в процессе реализации и поддержки. Расскажите о своем опыте верстки подобных сайтов, какие методологии, инструменты и технологии вы применяли на практике.
 
-### `yarn start`
+  В больших проектах нужно придерживаться единых стандартов внутри команды (стайлгайды, методологии, системы контроля версий). Разработчикам надо использовать проверенные методики и инструменты. В любом случае, тут важно всем работать в команде.
+  Для этих целей я использовал наименование классов по методологии БЭМ, сборщик gulp, css-препроцессоры sass, less, git
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Q3 Опишите основные особенности верстки сайтов, которые должны одинаково хорошо отображаться как на любом современном компьютере, так и на смартфонах и планшетах под управлением iOS и Android. Расскажите о своем опыте верстки подобных сайтов: какие инструменты и технологии вы применяли, как проверяли результат на различных устройствах, какие именно устройства требовалось поддерживать.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+В этом случае стоит быть внимательными с медиа выражениями, иметь разные разрешения изображений для retina и обычных дисплеев, пользоваться автопрефиксером для одинакового отображения страниц на разных устройствах и смотреть на поддержку технологий в разных браузерах, можно пользоваться полифиллами.
 
-### `yarn test`
+### Q4 Расскажите, какие инструменты помогают вам экономить время в процессе написания, проверки и отладки кода.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Пользуюсь препроцессорами для css с миксинами, переменными и вложенностью, для ускорения процесса верстки могут пригодиться pug или bootstrap. Код проверяю с помощью линтеров, встроенные в сборку (gulp). В javascript очень нравится библиотека react.
 
-### `yarn build`
+### Q5 Вам нужно понять, почему страница отображается некорректно в Safari на iOS и в IE на Windows. Код писали не вы, доступа к исходникам у вас нет. Ваши действия? Сталкивались ли вы с подобными проблемами на практике?
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Сподобным не сталкивался, но знаю как действую в таких случаях. Помогают виртуальные машины и специальные сервисы которые тестируют проект на множестве устройств, например BrowserStack
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Q6 Дизайнер отдал вам макет, в котором не показано, как должны выглядеть интерактивные элементы при наведении мыши. Ваши действия?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Найти дизайнера и попросить доделать
 
-### `yarn eject`
+### Q7 Какие ресурсы вы используете для развития в профессиональной сфере? Приведите несколько конкретных примеров (сайты, блоги и так далее). Какое направление развития вам более близко: JS-программирование, HTML/CSS верстка или и то, и другое? Какие ещё области знаний, кроме тех, что непосредственно относятся к работе, вам интересны?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  Habr, learn.javascript.ru, mdn. В последнее время начал решать задачки на codewars. Наиболее интересно мне программирование, но это не значит что визуализация не интересна. CSS тоже хорош), помимо фронтенда интересна психология.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Q8 Расскажите нам о себе и предоставьте несколько ссылок на последние работы, выполненные вами.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  Меня зовут Костя. Мне 32 года. Вредных привычек нет. Изучаю React, занимаюсь каждый день, вот мои некоторые работы по верстке:
+  https://github.com/k-solovev/floristry
+  https://github.com/k-solovev/sedona
+  https://github.com/k-solovev/cat-energy
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  кое что на реакт:
+  https://github.com/k-solovev/react-table
